@@ -3,93 +3,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terras Nacionais</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 50px;
-            min-height: 160vh;
-        }
-        .search-container {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-        }
-        .search-input {
-            padding: 10px;
-            margin-right: 10px;
-            width: 200px;
-            display: none;
-        }
-        .search-icon {
-            cursor: pointer;
-            width: 30px;
-            height: 30px;
-        }
-        .language-toggle {
-            margin-left: 10px;
-            cursor: pointer;
-            color: #007BFF;
-            text-decoration: underline;
-        }
-        .tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-        }
-        .tab {
-            padding: 10px 20px;
-            margin: 0 10px;
-            background-color: #007BFF;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .tab:hover {
-            background-color: #0056b3;
-        }
-        .links-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .link-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: #007BFF;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: white;
-        }
-        .link-item img {
-            max-width: 100px;
-            margin-bottom: 10px;
-        }
-        .link-item:hover {
-            text-decoration: underline;
-            background-color: #eaeaea;
-        }
-        .section {
-            margin-top: 40px;
-            padding: 20px;
-            border-top: 1px solid #ccc;
-        }
-        .quadrants {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 20px;
-            justify-items: center;
-        }
-    </style>
+    <link href="style.css" rel="stylesheet"
+  type="text/css"/>
 </head>
+
 <body>
     <div class="search-container">
         <img src="https://via.placeholder.com/30" alt="Lupa" class="search-icon" onclick="toggleSearch()">
@@ -114,7 +31,7 @@
             Exemplo 1
         </a>
         <a class="link-item" href="https://www.queimadas-no-sul.com" target="_blank">
-            <img src="imagem-do-site/image-completa/queimada-2.jfif" alt="queimedas-no-sul">
+            <img src="imagem-do-site/image-completa/queimadas-2.jfif" alt="queimedas-no-sul">
             Exemplo 2
         </a>
         <a class="link-item" href="https://www.queimadas-no-surdeste.com" target="_blank">
@@ -126,7 +43,7 @@
             Exemplo 4
         </a>
         <a class="link-item" href="https://www.queimadas-no-nordeste.com" target="_blank">
-            <img src="imagem-do-site/image-completa/queimada-5.jfif" alt="queimadas-no-nordeste">
+            <img src="imagem-do-site/image-completa/queimadas-5.jfif" alt="queimadas-no-nordeste">
             Exemplo 5
         </a>
         <a class="link-item" href="https://www.queimadas-no-sul.com" target="_blank">
