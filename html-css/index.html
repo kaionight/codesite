@@ -1,0 +1,348 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terras Nacionais</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 50px;
+            min-height: 160vh;
+        }
+        .search-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .search-input {
+            padding: 10px;
+            margin-right: 10px;
+            width: 200px;
+            display: none;
+        }
+        .search-icon {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+        }
+        .language-toggle {
+            margin-left: 10px;
+            cursor: pointer;
+            color: #007BFF;
+            text-decoration: underline;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .tab {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .tab:hover {
+            background-color: #0056b3;
+        }
+        .links-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .link-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #007BFF;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .link-item img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+        .link-item:hover {
+            text-decoration: underline;
+            background-color: #eaeaea;
+        }
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid #ccc;
+        }
+        .quadrants {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+            justify-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <img src="https://via.placeholder.com/30" alt="Lupa" class="search-icon" onclick="toggleSearch()">
+        <input type="text" class="search-input" placeholder="Pesquisar..." oninput="filterLinks()">
+        <span class="language-toggle" onclick="toggleLanguage()">PT/EN</span>
+    </div>
+    
+    <h1 id="main-title">Terras Nacionais</h1>
+
+    <div class="tabs">
+        <a class="tab" href="#norte" id="tab-norte">Norte</a>
+        <a class="tab" href="#nordeste" id="tab-nordeste">Nordeste</a>
+        <a class="tab" href="#centro-oeste" id="tab-centro-oeste">Centro-Oeste</a>
+        <a class="tab" href="#sudeste" id="tab-sudeste">Sudeste</a>
+        <a class="tab" href="#sul" id="tab-sul">Sul</a>
+    </div>
+    
+    <h2>Links Úteis</h2>
+    <div class="links-container" id="links-container">
+        <a class="link-item" href="https://www.exemplo1.com" target="_blank">
+            <img src="https://via.placeholder.com/100" alt="Exemplo 1">
+            Exemplo 1
+        </a>
+        <a class="link-item" href="https://www.exemplo2.com" target="_blank">
+            <img src="https://via.placeholder.com/100" alt="Exemplo 2">
+            Exemplo 2
+        </a>
+        <a class="link-item" href="https://www.exemplo3.com" target="_blank">
+            <img src="https://via.placeholder.com/100" alt="Exemplo 3">
+            Exemplo 3
+        </a>
+        <a class="link-item" href="https://www.exemplo4.com" target="_blank">
+            <img src="https://via.placeholder.com/100" alt="Exemplo 4">
+            Exemplo 4
+        </a>
+        <a class="link-item" href="https://www.exemplo5.com" target="_blank">
+            <img src="https://via.placeholder.com/100" alt="Exemplo 5">
+            Exemplo 5
+        </a>
+        <a class="link-item" href="https://www.exemplo6.com" target="_blank">
+            <img src="https://via.placeholder.com/100" alt="Exemplo 6">
+            Exemplo 6
+        </a>
+    </div>
+
+    <div class="section" id="norte">
+        <h2>Norte</h2>
+        <div class="quadrants">
+            <a class="link-item" href="https://www.exemplo-norte1.com" target="_blank">
+                <img src="https://via.placeholder.com/100" alt="Norte 1">
+                Norte Link 1
+            </a>
+            <a class="link-item" href="https://www.exemplo-norte2.com" target="_blank">
+                <img src="https://via.placeholder.com/100" alt="Norte 2">
+                Norte Link 2
+            </a>
+            <a class="link-item" href="https://www.exemplo-norte3.com" target="_blank">
+                <img src="https://via.placeholder.com/100" alt="Norte 3">
+                Norte Link 3
+            </a>
+            <a class="link-item" href="https://www.exemplo-norte4.com" target="_blank">
+                <img src="https://via.placeholder.com/100" alt="Norte 4">
+                Norte Link 4
+            </a>
+            <a class="link-item" href="https://www.exemplo-norte5.com" target="_blank">
+                <img src="https://via.placeholder.com/100" alt="Norte 5">
+                Norte Link 5
+            </a>
+            <a class="link-item" href="https://www.exemplo-norte6.com" target="_blank">
+                <img src="https://via.placeholder.com/100" alt="Norte 6">
+                Norte Link 6
+            </a>
+        </div>
+    </div>
+    
+    <div class="section" id="nordeste">
+        <h2>Nordeste</h2>
+        <div class="quadrants">
+                <a class="link-item" href="https://www.exemplo-nordeste1.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Nordeste 1">
+                    Nordeste Link 1
+                </a>
+                <a class="link-item" href="https://www.exemplo-nordeste2.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Nordeste 2">
+                    Nordeste Link 2
+                </a>
+                <a class="link-item" href="https://www.exemplo-nordeste3.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Nordeste 3">
+                    Nordeste Link 3
+                </a>
+                <a class="link-item" href="https://www.exemplo-nordeste4.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Nordeste 4">
+                    Nordeste Link 4
+                </a>
+                <a class="link-item" href="https://www.exemplo-nordeste5.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Nordeste 5">
+                    Nordeste Link 5
+                </a>
+                <a class="link-item" href="https://www.exemplo-nordeste6.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Nordeste 6">
+                    Nordeste Link 6
+                </a>      
+            </div>
+        </div>
+        <p>Conteúdo sobre a região Nordeste.</p>
+    </div>
+    
+    <div class="section" id="centro-oeste">
+        <h2>Centro-Oeste</h2>
+        <div class="quadrants">
+                <a class="link-item" href="https://www.exemplo-centro-oeste1.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Centro-Oeste 1">
+                    Centro-Oeste Link 1
+                </a>
+                <a class="link-item" href="https://www.exemplo-centro-oeste2.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Centro-Oeste 2">
+                    Centro-Oeste Link 2
+                </a>
+                <a class="link-item" href="https://www.exemplo-centro-oeste3.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Centro-Oeste 3">
+                    Centro-Oeste Link 3
+                </a>
+                <a class="link-item" href="https://www.exemplo-centro-oeste4.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Centro-Oeste 4">
+                    Centro-Oeste Link 4
+                </a>
+                <a class="link-item" href="https://www.exemplo-centro-oeste5.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Centro-Oeste 5">
+                    Centro-Oeste Link 5
+                </a>
+                <a class="link-item" href="https://www.exemplo-centro-oeste6.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Centro-Oeste 6">
+                    Centro-Oeste Link 6
+                </a>
+            </div>
+        </div>
+        <p>Conteúdo sobre a região Centro-Oeste.</p>
+    </div>
+    
+    <div class="section" id="sudeste">
+        <h2>Sudeste</h2>
+        <div class="quadrants">
+                <a class="link-item" href="https://www.exemplo-sudeste1.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Sudeste 1">
+                    Sudeste Link 1
+                </a>
+                <a class="link-item" href="https://www.exemplo-sudeste2.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Sudeste 2">
+                    Sudeste Link 2
+                </a>
+                <a class="link-item" href="https://www.exemplo-sudeste3.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Sudeste 3">
+                    Sudeste Link 3
+                </a>
+                <a class="link-item" href="https://www.exemplo-sudeste4.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Sudeste 4">
+                    Sudeste Link 4
+                </a>
+                <a class="link-item" href="https://www.exemplo-sudeste5.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Sudeste 5">
+                    Sudeste Link 5
+                </a>
+                <a class="link-item" href="https://www.exemplo-sudeste6.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Sudeste 6">
+                    Sudeste Link 6
+                </a>
+            </div>
+        </div>
+        <p>Conteúdo sobre a região Sudeste.</p>
+    </div>
+    
+    <div class="section" id="sul">
+        <h2>Sul</h2>
+        <div class="quadrants">
+                <a class="link-item" href="https://www.exemplo-sul1.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Sul 1">
+                    Sul Link 1
+                </a>
+                <a class="link-item" href="https://www.exemplo-sul2.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Sul 2">
+                    Sul Link 2
+                </a>
+                <a class="link-item" href="https://www.exemplo-sul3.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Sul 3">
+                    Sul Link 3
+                </a>
+                <a class="link-item" href="https://www.exemplo-sul4.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Sul 4">
+                    Sul Link 4
+                </a>
+                <a class="link-item" href="https://www.exemplo-sul5.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Sul 5">
+                    Sul Link 5
+                </a>
+                <a class="link-item" href="https://www.exemplo-sul6.com" target="_blank">
+                    <img src="https://via.placeholder.com/100" alt="Sul 6">
+                    Sul Link 6
+                </a>
+            </div>
+        </div>
+        <p>Conteúdo sobre a região Sul.</p>
+    </div>
+
+    <script>
+        let isPortuguese = true;
+
+        function toggleSearch() {
+            const input = document.querySelector('.search-input');
+            input.style.display = input.style.display === 'none' || input.style.display === '' ? 'inline' : 'none';
+            input.focus();
+        }
+
+        function toggleLanguage() {
+            isPortuguese = !isPortuguese;
+            updateLanguage();
+        }
+
+        function updateLanguage() {
+            const title = document.getElementById('main-title');
+            const tabs = {
+                norte: document.getElementById('tab-norte'),
+                nordeste: document.getElementById('tab-nordeste'),
+                centro_oeste: document.getElementById('tab-centro-oeste'),
+                sudeste: document.getElementById('tab-sudeste'),
+                sul: document.getElementById('tab-sul')
+            };
+
+            if (isPortuguese) {
+                title.textContent = "Terras Nacionais";
+                tabs.norte.textContent = "Norte";
+                tabs.nordeste.textContent = "Nordeste";
+                tabs.centro_oeste.textContent = "Centro-Oeste";
+                tabs.sudeste.textContent = "Sudeste";
+                tabs.sul.textContent = "Sul";
+            } else {
+                title.textContent = "National Lands";
+                tabs.norte.textContent = "North";
+                tabs.nordeste.textContent = "Northeast";
+                tabs.centro_oeste.textContent = "Midwest";
+                tabs.sudeste.textContent = "Southeast";
+                tabs.sul.textContent = "South";
+            }
+        }
+
+        function filterLinks() {
+            const input = document.querySelector('.search-input').value.toLowerCase();
+            const links = document.querySelectorAll('.link-item');
+
+            links.forEach(link => {
+                const text = link.textContent.toLowerCase();
+                link.style.display = text.includes(input) ? 'flex' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
